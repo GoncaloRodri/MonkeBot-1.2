@@ -4,7 +4,11 @@ export class FacTestManager {
     database: Map<string,  TestClass>;
 
     constructor(){
-        this.database = new Map<string, TestClass>();
+        try{
+            this.load()
+        } catch(Error){
+            this.database = new Map<string, TestClass>();
+        }
     }
 
     addTest(subject: string, date: Date, description: string) {
@@ -35,4 +39,11 @@ export class FacTestManager {
             return this.database.get(subject.trim().toUpperCase())!.getTestDates();
         }
     }
+/* 
+    protected save(){
+    }
+
+    protected load(){
+    }
+    */
 }
