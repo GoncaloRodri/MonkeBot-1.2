@@ -4,11 +4,8 @@ export class FacTestManager {
     database: Map<string,  TestClass>;
 
     constructor(){
-        try{
-            this.load()
-        } catch(Error){
-            this.database = new Map<string, TestClass>();
-        }
+         this.database = new Map<string, TestClass>();
+        
     }
 
     addTest(subject: string, date: Date, description: string) {

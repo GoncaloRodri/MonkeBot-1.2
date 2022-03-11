@@ -44,4 +44,4 @@ client.on('messageCreate', (message: Message) => {
     }
 })
 
-client.login(process.env.TOKEN)
+client.login("OTQzNDY5NjI4MjI5ODQwODk4.YgzgkA.Eb-IH2TMqDNHUz02HwcQxPDiGOY")
